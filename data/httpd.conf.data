@@ -1,0 +1,12 @@
+<VirtualHost {$.HOST}:{$.PORT}>
+    ServerAdmin {$.EMAIL}
+    DocumentRoot {$.SITE_PATH}{$.SITE_NAME}
+    ServerName  {$.SITE_NAME}
+    ServerAlias www.{$.SITE_NAME}
+    #ErrorLog {$.LOG_PATH}{$.SITE_NAME}-error_log
+    #CustomLog {$.LOG_PATH}{$.SITE_NAME}-access_log common
+    <Directory {$.SITE_PATH}>
+        AllowOverride All
+        Options All
+    </Directory>
+</VirtualHost>
